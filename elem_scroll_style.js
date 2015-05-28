@@ -1,6 +1,13 @@
 
-// Need: jquery 1.9.1+ 
-// 傳入 elem id , 選擇的 scroll type , now only one scroll_type
+/*  
+    Required: jquery 1.9.1+  
+    ******* important ******** 
+    if you use border on the elem , it delay few milliseconds for render ,so the top may not be correct.
+
+    parameters:
+        elem_id: a string for id of elem
+        scroll_type: a number , only one scroll_type now
+*/
 function elem_fixed_on_top(elem_id,scroll_type){
 
     var last_elem_top = 0;
@@ -10,7 +17,7 @@ function elem_fixed_on_top(elem_id,scroll_type){
     var elem = $('#'+elem_id);
     elem.addClass('elem_scroll_style1');    // init class
 
-    var elem_height = elem.height();
+    var elem_height = elem.outerHeight();
     var original_elem_top = elem.position().top;
     var original_elem_bottom = original_elem_top + elem_height;
     var placeholder = elem_height*2;
