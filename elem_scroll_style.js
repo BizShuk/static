@@ -49,12 +49,15 @@ function elem_fixed_on_top(elem_id,scroll_type){
 
         } else {    // bug css top vs position top混用錯誤
             // scroll up 超過準備區 且 elem 尚未出現螢幕 , if relative => elem不會再隱藏位置 ,  only fixed and hidden will equal -elem_height
-            if ( move_distance > 0 && 
-                 doc_top <= ori_elem_bottom + placeholder && 
-                 (elem_top == -elem_height || !elem.hasClass('elem_scroll_style1_on')) ){
-                elem.removeClass('elem_scroll_style1_on');
-                elem.css({'top': '0px'});
-                console.log("buffer area");
+            if (doc_top <= ori_elem_bottom + placeholder){
+
+                if( parseInt(elem_top) == parseInt(-elem_height) &&
+                elem.hasClass('elem_scroll_style1_on')
+                ){
+                    elem.removeClass('elem_scroll_style1_on');
+                    elem.css({'top': '0px'});
+                    console.log("buffer area");
+                }
                 return;
             }
 
