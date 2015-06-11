@@ -1,0 +1,219 @@
+body{
+    margin:0 0; 
+}
+
+.left_menu{ 
+    width:300px;
+    height:100%;
+    background-color:#ddd;
+    float:left; 
+    z-index:99; 
+}
+.bg_base{
+    background-position:center center;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+.right_content{ 
+    text-align:center; 
+}
+
+.menuitem{ width:100%; }
+
+
+a {
+    color: black;
+}
+
+header{
+    padding:15px 0px;
+    font-size:24px;
+    font-family:cursive;
+    text-align:center;
+}
+
+.frontcover{
+    background-image:url('http://static.shuk.info/imgs/279353_185914798134225_7445783_o.jpg');
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    width:100%;
+    height:100%;
+    z-index:10;
+}
+
+.screen-cover{
+    width:100%;
+    height:100vh;
+    background-color:#000;
+    opacity:0.6;
+    z-index:15;
+    position:absolute;
+    top:0px;
+    left:0px;
+    
+}
+
+
+.outer-container{
+    overflow:hidden;
+    width:100%;
+}
+
+.horizontal-container{
+    white-space:nowrap;
+    width:100%;
+    overflow:auto;
+    
+    word-spacing:-5px;
+}
+
+.horizontal::-webkit-scrollbar { 
+    display: none; 
+}
+
+.horizontal-photos{
+    display:inline-block;
+    height:250px;
+}
+.horizontal-photos img{
+    height:100%;    
+}
+
+
+.banner_grid_1{
+}
+
+.banner_grid_1 ul{
+    margin:0px 0px;
+    padding:0px 0px;
+}
+.banner_grid_1 li{
+    width:80%;
+    min-width:600px;
+    max-width:1000px;
+    margin:0 auto;
+    list-style-type: none;
+    height:150px;
+    padding-left:5px;
+}
+
+.banner_grid_1 li:hover{
+    border-left:5px solid #000;    
+}
+
+.banner_grid_1 .img{
+    width:200px;
+    height:100%;
+    float:left;
+    background-size:cover;
+}
+
+.banner_grid_1 .desc{
+    margin-left:230px;
+    padding:10px 0px;
+}
+
+.banner_grid_1 .right .img{
+    float:right;    
+}
+
+.banner_grid_1 .right .desc{
+    margin-left:30px;
+    margin-right:200px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.banner_grid_1 .desc header{
+    font-weight:bold;
+    font-size:18px;
+    padding:0px 0px;
+    margin-bottom:5px;
+    text-align:unset;
+}
+
+.sample_demo{
+    max-width:900px;
+    min-width:300px;
+    width:90%;
+    margin:0 auto;
+}
+
+.sample_demo section{
+    width:250px;
+    height:300px;
+    border:2px solid #888;
+    vertical-align:top;
+    display:inline-block;   
+    margin:0 20px;
+    margin-bottom:20px;
+}
+
+.sample_demo section div{
+    text-align:center;
+    background-color:#202020;
+    padding-top:5px;
+    height:95px;
+    color:#bbb;
+}
+
+.sample_demo .demo_photo{
+    width:250px;
+    height:200px;
+    display:block;
+    background-size:cover;
+}
+
+.clear{
+    clear:both;    
+}
+
+.tag{
+    padding:2px 6px;
+    cursor:pointer;
+    font-weight:bold;
+    line-height:30px;
+    margin:0px 4px;
+}
+
+.tag_1{
+    background-color:rgba(255,255,0,1);    
+}
+.tag_1:active{
+    background-color:rgba(255,255,,1);
+}
+.tag_2{
+    background-color:rgba(255,255,0,0.7);    
+}
+.tag_3{
+    background-color:rgba(255,255,0,0.4);    
+}
+.tag_4{
+    background-color:rgba(255,255,0,0.1);    
+}
+
+ul{
+    margin:0 0;    
+}
+
+.subject_list{
+    
+}
+
+.subject_list ul li header{
+    text-align:left;
+}
+
+.subject_list ul li div{
+    padding-bottom:5px;
+}
+
+.subject_list .desc{
+    line-height:25px;    
+}
+
+.subject_list .subtitle{
+    font-weight:bold;
+}
