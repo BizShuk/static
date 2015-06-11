@@ -1,17 +1,10 @@
-#brief{
-    position:absolute;
-    top:0px;
-    z-index:20;
-    color:white;   
-}
-
-
 #frontcover, #lifephoto , #education , #experience , #demo{
     width:100%;
 }
 
 #frontcover{
     height:100vh;
+    min-height:600px;
 }
 
 #lifephoto{

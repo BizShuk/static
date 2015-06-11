@@ -34,6 +34,9 @@ header{
 }
 
 .frontcover{
+    position:absolute;    
+    top:0px;    
+    left:0px;
     background-image:url('http://static.shuk.info/imgs/279353_185914798134225_7445783_o.jpg');
     background-size:cover;
     background-position:center center;
@@ -41,6 +44,7 @@ header{
     width:100%;
     height:100%;
     z-index:10;
+    min-height:600px;
 }
 
 .screen-cover{
@@ -52,8 +56,46 @@ header{
     position:absolute;
     top:0px;
     left:0px;
-    
+    min-height:600px;
 }
+.brief{
+    position:relative;
+    top:30%;
+    z-index:20;
+    color:white;
+    left:55%;
+    width:400px;
+    padding-right:20px;
+    height:500px;
+    line-height:30px;    
+}
+
+@media (max-height:600px){
+    .brief{
+        padding-right:unset;
+        left:unset;
+        margin:0 auto;
+    }   
+}
+    @media(max-width:950px){
+        .brief{
+            width:90%;
+            left:unset;
+            padding-right:unset;
+            margin:0 auto;
+        }    
+        @media(max-width:500px){
+            .brief{
+                top:20%;    
+            }
+            @media(max-width:400px){
+                .brief{
+                    top:50px;
+                }
+            }
+        }
+
+    }
 
 
 .outer-container{
