@@ -93,7 +93,7 @@ header{
         max-height:600px;
         text-align:center;
         width:100%;
-        padding-right:15px;
+        padding-right:17px;
     }
     .outer_brief{
         width:90%;
@@ -111,7 +111,7 @@ header{
         top:50px;
         overflow:auto;
         overflow-x:hidden;
-        padding-right:15px;
+        padding-right:17px;
         text-align:center;
     }
 }
