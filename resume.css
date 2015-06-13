@@ -1,10 +1,10 @@
-#frontcover, #lifephoto , #education , #experience , #demo{
+#lifephoto , #education , #experience , #demo{
     width:100%;
 }
 
 #frontcover{
     height:100vh;
-    min-height:600px;
+    position:relative;
 }
 
 #lifephoto{
@@ -61,7 +61,7 @@
     margin:0 auto;
 }
 
-@media (max-width:500px){
+@media screen and (max-width:500px){
     #skill > ul{
         width:90%;
     }
@@ -86,7 +86,7 @@
     position:relative;
     z-index:20;
 }
-@media (max-width:900px){
+@media screen and (max-width:900px){
     #experience_list{
         width:95%;    
         padding-left:0px;
@@ -97,22 +97,6 @@
     }
        
 }
-
-.background_cover{
-    -webkit-filter: opacity(0.4);
-    -moz-filter:  opacity(0.4);
-    -o-filter: opacity(0.4) ;
-    -ms-filter: opacity(0.4);
-    filter:  opacity(0.4);
-    position:absolute !important; 
-    background-size:fixed;
-    top:0px;
-    left:0px;
-    height:100%;
-    width:100%;
-    background-size:cover;
-}
-
 
 #yellow{
     /* IE9 SVG, needs conditional override of 'filter' to 'none' */
