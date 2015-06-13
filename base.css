@@ -81,7 +81,7 @@ header{
 @media screen and (max-width:950px){
     .brief{
         width:90%;
-        left:4%;        /* if left:5% , it'll over width:100% with width:90% */
+        left:0%;        /* if left:5% , it'll over width:100% with width:90% */
         margin:0 auto;
         text-align:center;
     }    
@@ -90,14 +90,28 @@ header{
 @media screen and (max-width:500px){
     .brief{
         top:20%;    
+        max-height:600px;
         text-align:center;
+        width:100%;
+        padding-right:15px;
+    }
+    .outer_brief{
+        width:90%;
+        margin:0 auto;
+        position:absolute;
+        left:0px;
+        right:0px;
+        height:100%;
+        overflow:hidden;
     }
 }
 
 @media screen and (max-width:400px){
     .brief{
         top:50px;
-        max-height:600px;
+        overflow:auto;
+        overflow-x:hidden;
+        padding-right:15px;
         text-align:center;
     }
 }
@@ -180,7 +194,7 @@ header{
     font-size:18px;
     padding:0px 0px;
     margin-bottom:5px;
-    text-align:left;
+    text-align:none;
 }
 
 @media screen and (max-width:600px){
