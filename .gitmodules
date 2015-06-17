@@ -7,3 +7,6 @@
 [submodule "library/Semantic-UI"]
 	path = library/Semantic-UI
 	url = https://github.com/Semantic-Org/Semantic-UI.git
+[submodule "library/jquery-mousewheel"]
+	path = library/jquery-mousewheel
+	url = https://github.com/jquery/jquery-mousewheel.git
