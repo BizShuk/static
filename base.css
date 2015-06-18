@@ -5,28 +5,29 @@ body{
 
 hr{    border:1px solid #eee;  }
 
-/* for img background-image container */
+/* for img  background-image(with background_cover) */
 .bg_base{
     background-position:center center;
     background-size:cover;
     background-repeat:no-repeat;
 }
 
-/* background_cover of container
-    <div id="content">
+/* background_cover of parent container
+    <div>
         <div class="background_cover bg_base" style="background-image....."></div>
     </div>
 */
 .background_cover{
     opacity:0.4;
     position:absolute !important;
-     background-size:fixed;
     top:0px;
     left:0px;
     height:100%;
     width:100%;
-    background-size:cover;
+    background-color: #000;
 }
+
+
 
 /* mac scroll bar from https://gist.github.com/devinrhode2/2573411 */
 /* Turn on custom 8px wide scrollbar */
@@ -357,3 +358,73 @@ ul{    margin:0 0;    }
 }
 .right_content{     text-align:center; }
 .menuitem{ width:100%; }
+
+
+
+
+/*
+    Grid , depend on pure css(.pure-g ,pure-u-1-6 for initial)
+    <div class="pure-g">
+        <div class="pure-u-1-6 bg_base grid_elem">
+            <p clss="img_title"></p>
+            <div class=""background_cover></div>
+        </div>
+    </div>
+*/
+
+.pure-g  .grid_elem{
+    position:relative;
+    width:100%;
+    height:150px;
+    background-color:#aaa;
+    background-size:cover;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    transition:all 50ms ease-in-out;
+}
+
+
+@media screen and (min-width:400px){
+    .pure-g  .grid_elem{
+        height:35vw;
+        width:50%;
+    }
+}
+@media screen and (min-width:900px){
+    .pure-g .grid_elem{
+        height:30vw;
+        width:33.3%;
+    }
+}
+@media screen and (min-width:1200px){
+    .pure-g  .grid_elem{
+        height:20vw;
+        width:25%;
+    }
+}
+@media screen and (min-width:1500px){
+    .pure-g  .grid_elem{
+        height:20vw;
+        width:20%;
+    }
+}
+
+.img_title{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    padding:5px;
+    margin-right:20px;
+    color:white;
+    transition:color 500ms;
+    z-index:5;
+}
+
+.grid_elem:hover .img_title{        color:black;    }
+.grid_elem:hover .background_cover{ opacity: 0;     }
+
+
+
