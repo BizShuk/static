@@ -378,7 +378,7 @@ ul{    margin:0 0;    }
     height:150px;
     background-color:#aaa;
     background-size:cover;
-
+    display:inline-block;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;

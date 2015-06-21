@@ -10,3 +10,6 @@
 [submodule "library/jquery-mousewheel"]
 	path = library/jquery-mousewheel
 	url = https://github.com/jquery/jquery-mousewheel.git
+[submodule "library/react"]
+	path = library/react
+	url = https://github.com/facebook/react.git
