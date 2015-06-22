@@ -1,0 +1,421 @@
+$color_black: #000
+$opacity_cover: 0.4
+$opacity_img: 0.6
+
+
+$font_family1: karla
+
+$font_size1: 8px
+$font_size2: 12px
+$font_size3: 18px
+$font_size4: 24px
+$font_size5: 36px
+$font_size6: 48px
+
+
+body
+    margin: 0
+
+ul
+    margin: 0
+
+hr
+    border: 1px solid #eee
+
+
+/* for img  background-image(with background_cover) */
+.bg_base
+    background-position: center center
+    background-size: cover
+    background-repeat: no-repeat
+
+/* 
+    background_cover of parent container
+    <div>
+            <div class="background_cover" style="background-image....."></div>
+    </div> */
+.background_cover
+    @entend .bg_base
+    position: absolute !important
+    top: 0px
+    left: 0px
+    height: 100%
+    width: 100%
+    background-color: $color_black
+    opacity: $opacity_cover
+
+a
+    color: $color_black
+    &[href^=tel]
+        color: inherit
+        text-decoration: none
+
+
+
+/* mac scroll bar from https://gist.github.com/devinrhode2/2573411 */
+/* Turn on custom 8px wide scrollbar */
+::-webkit-scrollbar 
+    width: 8px /* 1px wider than Lion. */
+    /* This is more usable for users trying to click it. */
+    background-color: rgba(0,0,0,0)
+    -webkit-border-radius: 100px
+    &:hover
+        background-color: rgba(0,0,0,0.09)
+
+
+
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+::-webkit-scrollbar-thumb
+    &:vertical
+        /* This is the EXACT color of Mac OS scrollbars.
+               Yes, I pulled out digital color meter */
+        background: rgba(0,0,0,0.5)
+        -webkit-border-radius: 100px
+        &:active
+            background: rgba(0,0,0,0.61) /* Some darker color when you click it */
+            -webkit-border-radius: 100px
+            
+
+
+
+
+
+header
+    padding: 15px 0px
+    font-size: $font_size4
+    font-family: $font_family1
+    text-align: center
+
+
+
+
+.tag
+    padding: 2px 6px
+    cursor: pointer
+    font-weight: bold
+    line-height: 30px
+    margin: 0px 4px
+    -webkit-border-radius: 5px
+    -moz-border-radius: 5px
+    border-radius: 5px
+    -webkit-box-shadow: 0px 0px 0px 1px rgba(176,157,72,1)
+    -moz-box-shadow: 0px 0px 0px 1px rgba(176,157,72,1)
+    box-shadow: 0px 0px 0px 1px rgba(176,157,72,1)
+
+.tag
+    &:hover
+        background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1))
+        background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1))
+        background-image: -moz-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1))
+        background-image: -o-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1))
+
+
+@for $i from 1 through 10
+    .tag_#{$i}
+        background-color: rgba(255,255,0,$i/10)
+
+
+/*
+   Grid , depend on pure css(.pure-g ,pure-u-1-6 for initial)
+   <div class="pure-g">
+       <div class="pure-u-1-6 bg_base grid_elem">
+           <p clss="img_title"></p>
+           <div class=""background_cover></div>
+       </div>
+   </div> */
+
+
+    .pure-g 
+    .gird_elem
+        position: relative
+        width: 100%
+        height: 150px
+        background-color: #aaa
+        @extend .bg_base
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box
+        transition: all 50ms ease-in-out
+        @media screen and (min-width: 400px)
+            height: 35vw
+            width: 50%
+        @media screen and (min-width: 900px)
+            height: 30vw
+            width: 33.3%
+        @media screen and (min-width: 1200px)
+            height: 20vw
+            width: 25%
+        @media screen and (min-width: 1500px)
+            height: 20vw
+            width: 20%
+        &:hover .img_title
+            color: $color_black
+        &:hover .background_cover
+            opacity: 0
+        .img_title
+            position: absolute
+            right: 0px
+            bottom: 0px
+            padding: 5px
+            margin-right: 20px
+            color: white
+            transition: color 500ms
+            z-index: 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.frame_menu 
+    .left_menu
+        width: 300px
+        height: 100%
+        background-color: #ddd
+        float: left
+        z-index: 99
+        .menuitem
+            width: 100%
+    .right_content
+        text-align: center
+
+
+
+.subject_list
+    .desc
+        line-height: 25px
+    .subtitle
+        font-weight: bold
+    ul
+        li
+            header
+                text-align: left
+            div
+                padding-bottom: 5px
+
+.clear
+    clear: both
+
+@mixin mobile_vertical_border
+    width: 100%
+    margin: 0
+    border: 0
+
+.sample_demo
+    width: 900px
+    margin: 0 auto
+    section
+        width: 250px
+        border: 2px solid #888
+        vertical-align: top
+        display: inline-block
+        margin: 0 20px
+        margin-bottom: 20px
+        div
+            text-align: center
+            background-color: #202020
+            padding-top: 5px
+            color: #bbb
+    .demo_photo
+        width: 250px
+        height: 200px
+        display: block
+    @media screen and (max-width: 900px)
+        width: 600px
+    @media screen and (max-width: 600px)
+        width: 300px
+    @media screen and (max-width: 450px)
+        +mobile_vertical_border
+        .demo_photo
+            +mobile_vertical_border
+        section
+            +mobile_vertical_border
+            div
+                padding-bottom: 15px
+                +mobile_vertical_border
+
+
+    
+
+
+
+
+
+
+.banner_grid_1
+    ul
+        padding: 0
+    li
+        width: 80%
+        min-width: 600px
+        max-width: 1000px
+        margin: 0 auto
+        list-style-type: none
+        height: 150px
+        padding-left: 5px
+        &:hover
+            border-left: 5px solid #000
+            @media screen and (max-width:600px)
+                border: 0
+        @media screen and (max-width:600px)
+            min-width: 0px
+            max-width: 100%
+            padding: 0
+            height: auto
+            text-align: center
+            width: 100% !important
+    .img
+        width: 200px
+        height: 150px   
+        float: left
+        @media screen and (max-width:600px)
+            float: none
+            width: 100%
+            height: 150px
+    .desc
+        margin-left: 230px
+        padding: 10px 0px
+        @media screen and (max-width:600px)
+            width: 100%
+            margin: 0px !important
+            padding: 0px !important
+        header
+            font-weight: bold
+            font-size: $font_size3
+            padding: 0
+            margin-bottom: 5px
+            text-align: none
+    .right 
+        .img
+            float: right
+        .desc
+            margin-left: 30px
+            margin-right: 200px
+            padding-left: 20px
+            padding-right: 20px
+
+    
+
+
+
+
+
+
+
+.outer-container
+    overflow: hidden
+    width: 100%
+
+.horizontal-container
+    white-space: nowrap
+    width: 100%
+    overflow-x: scroll
+    overflow-y: hidden
+    -webkit-overflow-scrolling: touch
+    word-spacing: -5px
+
+.horizontal-photos
+    display: inline-block
+    height: 250px
+    img
+        height: 100%
+
+
+
+.frontcover
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 100%
+    z-index: 10
+    min-height: 600px
+
+.screen-cover
+    position: absolute
+    top: 0px
+    left: 0px
+    background-color: $color_black
+    width: 100%
+    height: 100%
+    opacity: 0.6
+    z-index: 15
+    min-height: 600px
+
+.brief
+    position: absolute
+    top: 30%
+    z-index: 20
+    color: white
+    left: 55%
+    width: 400px
+    padding-right: 20px
+    height: 500px
+    line-height: 30px
+    @media screen and (max-height:600px)
+        padding-right: auto
+        margin: 0 auto
+        text-align: center
+    @media screen and (max-width:950px)
+        width: 90%
+        left: 0%        // if left:5% , it'll over width:100% with width:90% 
+        margin: 0 auto
+        text-align: center
+    @media screen and (max-width:500px)
+        top: 20%
+        max-height: 600px
+        text-align: center
+        width: 100%
+        padding-right: 17px
+    @media screen and (max-width:400px)
+        top: 50px
+        overflow: auto
+        overflow-x: hidden
+        padding-right: 17px
+        text-align: center
+
+
+
+
+
+@media screen and (max-width:500px)
+    .outer_brief
+        width: 90%
+        margin: 0 auto
+        position: absolute
+        left: 0px
+        right: 0px
+        height: 100%
+        overflow: hidden
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
